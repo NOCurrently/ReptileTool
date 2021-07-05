@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xc.mapper.OperationLogMapper">
+  <resultMap id="BaseResultMap" type="com.xc.po.OperationLog">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="create_by" jdbcType="VARCHAR" property="createBy" />
+    <result column="url" jdbcType="VARCHAR" property="url" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="operation_data" jdbcType="LONGVARCHAR" property="operationData" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, `type`, create_by, url, create_time, operation_data
+  </sql>
+  <insert id="insertSelective" parameterType="com.xc.po.OperationLog">
+    insert into operation_log
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="type != null">
+          `type`,
+      </if>
+      <if test="createBy != null">
+          create_by,
+      </if>
+      <if test="url != null">
+        url,
+      </if>
+      <if test="operationData != null">
+        operation_data,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="type != null">
+        #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="createBy != null">
+        #{createBy,jdbcType=VARCHAR},
+      </if>
+      <if test="url != null">
+        #{url,jdbcType=VARCHAR},
+      </if>
+      <if test="operationData != null">
+        #{operationData,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+</mapper>
