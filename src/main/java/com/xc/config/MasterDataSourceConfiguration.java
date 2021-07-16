@@ -17,7 +17,7 @@ import javax.sql.DataSource;
 import java.sql.SQLException;
 
 @Configuration
-@MapperScan(basePackages = "com.xc.mapper", sqlSessionTemplateRef  = "masterSqlSessionTemplate")
+@MapperScan(basePackages = "com.dowload.mapper", sqlSessionTemplateRef  = "masterSqlSessionTemplate")
 public class MasterDataSourceConfiguration  {
 
 

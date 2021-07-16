@@ -79,7 +79,7 @@ CREATE TABLE `data_source` (
 --
 
 INSERT INTO `data_source` (`id`, `timeout`, `type`, `param_template`, `result_extract`, `backup`, `status`, `update_by`, `create_by`, `create_time`, `update_time`, `url`, `headers`, `request_type`, `data_type`, `service`, `method`, `token`, `alise`) VALUES
-(5, NULL, 1, '{\"name\":\"${name}\",\"age\":${age},\"address\":\"${address}\"}', '{\"namexc\":\"namexc_returt\"}', NULL, 1, 'string', 'string', '2021-06-27 14:14:18', '2021-06-27 15:03:32', 'http://127.0.0.1:5002/xc', NULL, NULL, 1, NULL, NULL, NULL, NULL),
+(5, NULL, 1, '{\"name\":\"${name}\",\"age\":${age},\"address\":\"${address}\"}', '{\"namexc\":\"namexc_returt\"}', NULL, 1, 'string', 'string', '2021-06-27 14:14:18', '2021-06-27 15:03:32', 'http://127.0.0.1:5002/dowload', NULL, NULL, 1, NULL, NULL, NULL, NULL),
 (6, NULL, 0, '[{\"deliveryType\":${deliveryType},\"childChannel\":\"${childChannel}\",\"class\":\"com.jd.deliveryTransition.model.DeliveryDynamicFlow\"}]', '{\"errorMsg\":\"msg\"}', NULL, 1, 'string', 'string', '2021-06-27 14:21:09', '2021-06-27 14:42:25', NULL, NULL, NULL, NULL, 'com.jd.deliveryTransition.api.DeliveryTransitionAssistantContentService', 'insertContentItem', NULL, NULL);
 
 -- --------------------------------------------------------
@@ -155,7 +155,7 @@ CREATE TABLE `operation_log` (
 --
 
 INSERT INTO `operation_log` (`id`, `type`, `create_by`, `url`, `create_time`, `operation_data`) VALUES
-(1, 'execute', NULL, 'com.xc.datasouce.controller.AggregatDataSourceController#execute', '2021-06-27 15:19:36', '{\"result\":{\"msg\":\"dsafdsa\",\"namexc_returt\":\"222xc\"},\"param\":[{\"id\":4,\"param\":{\"name\":\"222\",\"age\":3,\"address\":\"发\",\"deliveryType\":1,\"childChannel\":\"channel\"}}]}');
+(1, 'execute', NULL, 'com.dowload.datasouce.controller.AggregatDataSourceController#execute', '2021-06-27 15:19:36', '{\"result\":{\"msg\":\"dsafdsa\",\"namexc_returt\":\"222xc\"},\"param\":[{\"id\":4,\"param\":{\"name\":\"222\",\"age\":3,\"address\":\"发\",\"deliveryType\":1,\"childChannel\":\"channel\"}}]}');
 
 -- --------------------------------------------------------
 

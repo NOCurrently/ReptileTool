@@ -42,7 +42,7 @@ public class Swagger2Config extends WebMvcConfigurationSupport {
                 .globalOperationParameters(headerParameters)
                 .select()
                 //为当前包路径
-                .apis(RequestHandlerSelectors.basePackage("com.xc"))
+                .apis(RequestHandlerSelectors.basePackage("com.dowload"))
                 .paths(PathSelectors.any())
                 .build();
     }
